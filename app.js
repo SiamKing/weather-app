@@ -14,3 +14,6 @@ angular.module('weatherApp', ['ui.router', 'ngResource'])
         controller: 'ForecastController as vm'
       })
   }])
+  .config(['$sceDelegateProvider', function($sceDelegateProvider) {
+      $sceDelegateProvider.resourceUrlWhitelist(['self', '**'])
+  }]);
