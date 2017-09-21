@@ -13,6 +13,11 @@ angular.module('weatherApp', ['ui.router', 'ngResource'])
         templateUrl: './forecast/forecast.html',
         controller: 'ForecastController as vm'
       })
+      .state('forecast.days', {
+        url: '/forecast/:days',
+        templateUrl: './forecast/forecast.html',
+        controller: 'ForecastController as vm'
+      })
   }])
   .config(['$sceDelegateProvider', function($sceDelegateProvider) {
       $sceDelegateProvider.resourceUrlWhitelist(['self', '**'])

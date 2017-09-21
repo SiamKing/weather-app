@@ -1,4 +1,6 @@
 Forecast for {{city}}
+<hr />
+Days: <a ui-sref="forecast.days({days: 3})">3</a> | <a ui-sref="forecast.days({days: 5})">5</a>
 
 <div ng-repeat="w in weatherResult.list">
   <div class="row">
