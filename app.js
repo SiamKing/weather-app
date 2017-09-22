@@ -13,10 +13,11 @@ angular.module('weatherApp', ['ui.router', 'ngResource'])
         templateUrl: './forecast/forecast.html',
         controller: 'ForecastController as vm'
       })
-      .state('forecast.days', {
-        url: '/forecast/:days',
+      .state('days', {
+        url: 'forecast/:days',
         templateUrl: './forecast/forecast.html',
-        controller: 'ForecastController as vm'
+        controller: 'ForecastController as vm',
+        params: { days: null }
       })
   }])
   .config(['$sceDelegateProvider', function($sceDelegateProvider) {
